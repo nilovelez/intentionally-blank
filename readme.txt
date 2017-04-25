@@ -2,7 +2,7 @@
 Contributors: nilovelez
 Tags: custom-background, theme-options, translation-ready
 Requires at least: 4.3
-Tested up to: 4.6.1
+Tested up to: 4.7.4
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -29,6 +29,21 @@ Blank it's actually safer than all those bloated multi-purpose themes. There isn
 I probably can, but I probably won't. Blank serves a single pupose, closing the front-end, and it does that beatifully. If there's anything more you need, fork it or install a plugin.
 
 == Changelog ==
+
+= 1.3 = 
+* Refactor and optimization. Yes, really
+
+= 1.2.3 =
+* First release available at the WordPress theme directory. Woohoo!
+
+= 1.2.2 =
+* fixes to coply with Theme review team
+
+= 1.2.1 =
+* fixes to comply with Theme review team
+
+= 1.2 =
+* submitted to the WordPress theme directory
 
 = 1.1 = 
 * Let's clean up this mess before review

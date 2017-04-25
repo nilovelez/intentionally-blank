@@ -30,8 +30,7 @@ if ( ! function_exists( 'blank_setup' ) ) :
 endif; // blank_setup
 add_action( 'after_setup_theme', 'blank_setup' );
 
-
-function blank_enqueue_style() {
-    wp_enqueue_style( 'blank-style', get_stylesheet_uri() ); 
+function blank_customizer_cleanup($wp_customize){
+	$wp_customize->remove_section( 'static_front_page' );
 }
-add_action( 'wp_enqueue_scripts', 'blank_enqueue_style' );
+add_action( 'customize_register', 'blank_customizer_cleanup');
