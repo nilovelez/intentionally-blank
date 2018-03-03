@@ -30,6 +30,9 @@ I probably can, but I probably won't. Blank serves a single pupose, closing the 
 
 == Changelog ==
 
+= 1.4 =
+* Code revised to conform to WordPress coding conventions
+
 = 1.3 = 
 * Refactor and optimization. Yes, really
 

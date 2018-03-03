@@ -1,5 +1,16 @@
 <?php
+/**
+ * Intentionally Blank Theme functions
+ *
+ * @package WordPress
+ * @subpackage intentionally-blank
+ */
+
 if ( ! function_exists( 'blank_setup' ) ) :
+	/**
+	 * Sets up theme defaults and registers the various WordPress features that
+	 * this theme supports.
+	 */
 	function blank_setup() {
 		load_theme_textdomain( 'intentionally-blank' );
 		add_theme_support( 'automatic-feed-links' );
@@ -19,18 +30,21 @@ if ( ! function_exists( 'blank_setup' ) ) :
 			'header-text' => array( 'site-title', 'site-description' ),
 		) );
 
+		/**
+		 * Sets up theme defaults and registers the various WordPress features that
+		 * this theme supports.
+		 */
 		function blank_custom_logo() {
 			if ( function_exists( 'the_custom_logo' ) ) {
 				return get_custom_logo();
-			}else{
+			} else {
 				return '';
 			}
 		}
 	}
-endif; // blank_setup
+endif; // end function_exists blank_setup.
 add_action( 'after_setup_theme', 'blank_setup' );
 
-function blank_customizer_cleanup($wp_customize){
+add_action( 'customize_register', function( $wp_customize ) {
 	$wp_customize->remove_section( 'static_front_page' );
-}
-add_action( 'customize_register', 'blank_customizer_cleanup');
+} );

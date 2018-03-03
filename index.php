@@ -1,4 +1,12 @@
-<!DOCTYPE html>
+<?php
+/**
+ * The base (and only) template
+ *
+ * @package WordPress
+ * @subpackage intentionally-blank
+ */
+
+?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -16,15 +24,19 @@ body{background-color: #f5f5f5; background-size:cover}
 
 <div class="site-title"><div class="site-title-bg">
 <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-<?php $description = get_bloginfo( 'description', 'display' );
-if ( $description || is_customize_preview() ) : ?>
-	<p class="site-description"><?php echo $description; ?></p>
+<?php
+$description = get_bloginfo( 'description', 'display' );
+if ( $description || is_customize_preview() ) :
+?>
+	<p class="site-description"><?php echo esc_html( $description ); ?></p>
 <?php endif; ?>
 </div></div>
-<?php echo blank_custom_logo() ?>
+<?php echo esc_html( blank_custom_logo() ); ?>
 
 <footer id="colophon" class="site-footer"><div class="site-info">
-	<?php _e('Intentionally Blank') ?> - <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'intentionally-blank' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'intentionally-blank' ), 'WordPress' ); ?></a>
+	<?php esc_html_e( 'Intentionally Blank' ); ?>
+	<?php /* translators: Proudly powered by WordPress */ ?>
+	- <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'intentionally-blank' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'intentionally-blank' ), 'WordPress' ); ?></a>
 </div></footer>
 </div><!-- #page -->
 <?php wp_footer(); ?></body></html>
