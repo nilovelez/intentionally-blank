@@ -36,9 +36,7 @@ if ( ! function_exists( 'blank_setup' ) ) :
 		 */
 		function blank_custom_logo() {
 			if ( function_exists( 'the_custom_logo' ) ) {
-				return get_custom_logo();
-			} else {
-				return '';
+				the_custom_logo();
 			}
 		}
 	}

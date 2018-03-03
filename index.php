@@ -31,7 +31,7 @@ if ( $description || is_customize_preview() ) :
 	<p class="site-description"><?php echo esc_html( $description ); ?></p>
 <?php endif; ?>
 </div></div>
-<?php echo esc_html( blank_custom_logo() ); ?>
+<?php blank_custom_logo(); ?>
 
 <footer id="colophon" class="site-footer"><div class="site-info">
 	<?php esc_html_e( 'Intentionally Blank' ); ?>

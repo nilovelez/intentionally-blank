@@ -30,6 +30,9 @@ I probably can, but I probably won't. Blank serves a single pupose, closing the 
 
 == Changelog ==
 
+= 1.4.1 =
+* Fixed custom logo markup
+
 = 1.4 =
 * Code revised to conform to WordPress coding conventions
 
