@@ -46,3 +46,11 @@ add_action( 'after_setup_theme', 'blank_setup' );
 add_action( 'customize_register', function( $wp_customize ) {
 	$wp_customize->remove_section( 'static_front_page' );
 } );
+
+// Prevent Block Editor CSS from loading on the front
+add_action( 'wp_enqueue_scripts', 'blank_remove_wp_block_library_css', 100 );
+function blank_remove_wp_block_library_css(){
+	wp_dequeue_style( 'wp-block-library' );       // WordPress core
+	wp_dequeue_style( 'wp-block-library-theme' ); // WordPress core
+	wp_dequeue_style( 'wc-block-style' );         // WooCommerce
+}
