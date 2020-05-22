@@ -25,16 +25,16 @@ body{background-color: #f5f5f5; background-size:cover}
 <div class="site-title"><div class="site-title-bg">
 <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 <?php
-$description = get_bloginfo( 'description', 'display' );
-if ( $description || is_customize_preview() ) :
-?>
-	<p class="site-description"><?php echo esc_html( $description ); ?></p>
+$blank_description = get_bloginfo( 'description', 'display' );
+if ( $blank_description || is_customize_preview() ) :
+	?>
+	<p class="site-description"><?php echo esc_html( $blank_description ); ?></p>
 <?php endif; ?>
 </div></div>
-<?php blank_custom_logo(); ?>
+<?php the_custom_logo(); ?>
 
 <footer id="colophon" class="site-footer"><div class="site-info">
-	<?php esc_html_e( 'Intentionally Blank' ); ?>
+	<?php esc_html_e( 'Intentionally Blank', 'intentionally-blank' ); ?>
 	<?php /* translators: Proudly powered by WordPress */ ?>
 	- <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'intentionally-blank' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'intentionally-blank' ), 'WordPress' ); ?></a>
 </div></footer>
