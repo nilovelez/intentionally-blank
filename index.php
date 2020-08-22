@@ -20,7 +20,7 @@ body{background-color: #f5f5f5; background-size:cover}
 #colophon{position:absolute;width:100%;left:0;bottom:0;padding:10px 0;text-align:center;color:#333;background-color:rgba(241,241,241,0.4)}
 #colophon a{text-decoration:none; color: #333;}</style>
 <?php wp_head(); ?>
-</head><body <?php body_class(); ?>><div id="page">
+</head><body <?php body_class(); ?>><?php wp_body_open(); ?><div id="page">
 
 <div class="site-title"><div class="site-title-bg">
 <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

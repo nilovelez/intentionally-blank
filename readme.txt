@@ -30,6 +30,9 @@ I probably can, but I probably won't. Blank serves a single pupose, closing the 
 
 == Changelog ==
 
+= 2.0 =
+* Added wp_body_open() and some required headers. Enjoy!
+
 = 1.5 =
 * Minor updates and WordPress Coding Standards fixes
 
