@@ -33,10 +33,12 @@ if ( $blank_description || is_customize_preview() ) :
 </div></div>
 <?php the_custom_logo(); ?>
 
-<footer id="colophon" class="site-footer"><div class="site-info">
-	<?php esc_html_e( 'Intentionally Blank', 'intentionally-blank' ); ?>
-	<?php /* translators: Proudly powered by WordPress */ ?>
-	- <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'intentionally-blank' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'intentionally-blank' ), 'WordPress' ); ?></a>
-</div></footer>
+<footer id="colophon" class="site-footer">
+	<?php if ( get_theme_mod( 'blank_show_copyright' ) ) : ?>
+	<div class="site-info">
+		<?php echo esc_html( get_theme_mod( 'blank_copyright' ) ); ?>
+	</div>
+	<?php endif; ?>
+</footer>
 </div><!-- #page -->
 <?php wp_footer(); ?></body></html>

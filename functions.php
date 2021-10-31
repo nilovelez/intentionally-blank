@@ -39,9 +39,57 @@ if ( ! function_exists( 'blank_setup' ) ) :
 endif; // end function_exists blank_setup.
 add_action( 'after_setup_theme', 'blank_setup' );
 
-add_action(
-	'customize_register',
-	function( $wp_customize ) {
-		$wp_customize->remove_section( 'static_front_page' );
-	}
-);
+/**
+ * Sets up theme defaults and registers the various WordPress features that
+ * this theme supports.
+
+ * @param class $wp_customize Customizer object.
+ */
+function blank_customize_register( $wp_customize ) {
+	$wp_customize->remove_section( 'static_front_page' );
+
+	$wp_customize->add_section(
+		'blank_footer',
+		array(
+			'title'      => __( 'Footer', 'intentionally-blank' ),
+			'priority'   => 120,
+			'capability' => 'edit_theme_options',
+			'panel'      => '',
+		)
+	);
+	$wp_customize->add_setting(
+		'blank_copyright',
+		array(
+			'type'    => 'theme_mod',
+			'default' => __( 'Intentionally Blank - Proudly powered by WordPress', 'intentionally-blank' ),
+		)
+	);
+	$wp_customize->add_setting(
+		'blank_show_copyright',
+		array(
+			'default' => 1,
+		)
+	);
+
+	$wp_customize->add_control(
+		'blank_copyright',
+		array(
+			'type'     => 'textarea',
+			'label'    => __( 'Copyright Text', 'intentionally-blank' ),
+			'section'  => 'blank_footer',
+			'settings' => 'blank_copyright',
+			'priority' => '10',
+		)
+	);
+	$wp_customize->add_control(
+		'blank_footer_copyright_hide',
+		array(
+			'type'     => 'checkbox',
+			'label'    => __( 'Show Copyright Text', 'intentionally-blank' ),
+			'section'  => 'blank_footer',
+			'settings' => 'blank_show_copyright',
+			'priority' => '20',
+		)
+	);
+}
+add_action( 'customize_register', 'blank_customize_register', 100 );

@@ -30,6 +30,9 @@ I probably can, but I probably won't. Blank serves a single pupose, closing the 
 
 == Changelog ==
 
+= 3.0 =
+* Added Footer settings to the Customizer
+
 = 2.2 =
 * Tested up to WordPress 5.8
 
