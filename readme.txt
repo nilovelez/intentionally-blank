@@ -30,6 +30,9 @@ I probably can, but I probably won't. Blank serves a single pupose, closing the 
 
 == Changelog ==
 
+= 3.0.1 =
+* Customizer options sanitization
+
 = 3.0 =
 * Added Footer settings to the Customizer
 

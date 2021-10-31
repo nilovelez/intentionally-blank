@@ -60,17 +60,29 @@ function blank_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'blank_copyright',
 		array(
-			'type'    => 'theme_mod',
-			'default' => __( 'Intentionally Blank - Proudly powered by WordPress', 'intentionally-blank' ),
-		)
-	);
-	$wp_customize->add_setting(
-		'blank_show_copyright',
-		array(
-			'default' => 1,
+			'type'              => 'theme_mod',
+			'default'           => __( 'Intentionally Blank - Proudly powered by WordPress', 'intentionally-blank' ),
+			'sanitize_callback' => 'wp_kses_post',
 		)
 	);
 
+	/**
+	 * Checkbox sanitization function
+
+	 * @param bool $checked Whether the checkbox is checked.
+	 * @return bool Whether the checkbox is checked.
+	 */
+	function blank_sanitize_checkbox( $checked ) {
+		// Returns true if checkbox is checked.
+		return ( ( isset( $checked ) && true === $checked ) ? true : false );
+	}
+	$wp_customize->add_setting(
+		'blank_show_copyright',
+		array(
+			'default'           => true,
+			'sanitize_callback' => 'blank_sanitize_checkbox',
+		)
+	);
 	$wp_customize->add_control(
 		'blank_copyright',
 		array(

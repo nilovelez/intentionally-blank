@@ -32,11 +32,10 @@ if ( $blank_description || is_customize_preview() ) :
 <?php endif; ?>
 </div></div>
 <?php the_custom_logo(); ?>
-
 <footer id="colophon" class="site-footer">
-	<?php if ( get_theme_mod( 'blank_show_copyright' ) ) : ?>
+	<?php if ( get_theme_mod( 'blank_show_copyright', true ) ) : ?>
 	<div class="site-info">
-		<?php echo esc_html( get_theme_mod( 'blank_copyright' ) ); ?>
+		<?php echo esc_html( get_theme_mod( 'blank_copyright', __( 'Intentionally Blank - Proudly powered by WordPress', 'intentionally-blank' ) ) ); ?>
 	</div>
 	<?php endif; ?>
 </footer>
