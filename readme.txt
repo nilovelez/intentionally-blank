@@ -30,6 +30,10 @@ I probably can, but I probably won't. Blank serves a single pupose, closing the 
 
 == Changelog ==
 
+= 3.0.2 =
+* Changed footer sanitization to wp_kses_post to allow basic html
+* Tested up to WordPress 5.9
+
 = 3.0.1 =
 * Customizer options sanitization
 
