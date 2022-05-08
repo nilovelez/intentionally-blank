@@ -2,7 +2,7 @@
 Contributors: nilovelez
 Tags: custom-background, theme-options, translation-ready
 Requires at least: 4.6
-Tested up to: 5.8
+Tested up to: 6.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -29,6 +29,10 @@ Blank it's actually safer than all those bloated multi-purpose themes. There isn
 I probably can, but I probably won't. Blank serves a single pupose, closing the front-end, and it does that beatifully. If there's anything more you need, fork it or install a plugin.
 
 == Changelog ==
+
+= 3.0.3 =
+* Added featured images support. Props Eric Pfeiffer
+* Tested up to WordPress 6.0
 
 = 3.0.2 =
 * Changed footer sanitization to wp_kses_post to allow basic html
