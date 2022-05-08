@@ -15,7 +15,6 @@ if ( ! function_exists( 'blank_setup' ) ) :
 		load_theme_textdomain( 'intentionally-blank' );
 		add_theme_support( 'automatic-feed-links' );
 		add_theme_support( 'title-tag' );
-
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme allows users to set a custom background.
