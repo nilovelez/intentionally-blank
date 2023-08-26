@@ -2,7 +2,7 @@
 Contributors: nilovelez
 Tags: featured-images, custom-background, theme-options, translation-ready
 Requires at least: 4.6
-Tested up to: 6.0
+Tested up to: 6.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -18,7 +18,7 @@ You might be using the WordPress REST API as a backend for a mobile App or you m
 
 = Is this a joke? =
 
-Nope. It's a fully functional 8Kb theme. And it's really cool.
+Nope. It's a fully functional and tiny theme. And it's really cool.
 
 = Is it safe for production? =
 
@@ -29,6 +29,14 @@ Blank it's actually safer than all those bloated multi-purpose themes. There isn
 I probably can, but I probably won't. Blank serves a single pupose, closing the front-end, and it does that beatifully. If there's anything more you need, fork it or install a plugin.
 
 == Changelog ==
+
+= 3.1 =
+* Tested up to WordPress 6.3
+* Updated minimal PHP version to 7.4
+* Update: Footer is not rendered at all if set to not show it
+* Update: Header is not rendered at all if set to not show site title and tagline
+* Update: dequeued block editor global-css in the front-end
+* Update: all css styles are now conditionally loaded to reduce rendered html
 
 = 3.0.3 =
 * Added featured images support. Props Eric Pfeiffer
