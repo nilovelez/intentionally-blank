@@ -38,8 +38,21 @@ if ( ! function_exists( 'blank_setup' ) ) :
 		);
 	}
 endif; // end function_exists blank_setup.
+
 add_action( 'after_setup_theme', 'blank_setup' );
 
+remove_action( 'wp_head', '_custom_logo_header_styles' );
+
+if ( ! is_admin() ) {
+	add_action(
+		'wp_enqueue_scripts',
+		function() {
+			wp_dequeue_style( 'global-styles' );
+			wp_dequeue_style( 'classic-theme-styles' );
+			wp_dequeue_style( 'wp-block-library' );
+		}
+	);
+}
 /**
  * Sets up theme defaults and registers the various WordPress features that
  * this theme supports.
@@ -98,7 +111,7 @@ function blank_customize_register( $wp_customize ) {
 		'blank_footer_copyright_hide',
 		array(
 			'type'     => 'checkbox',
-			'label'    => __( 'Show Copyright Text', 'intentionally-blank' ),
+			'label'    => __( 'Show footer with copyright Text', 'intentionally-blank' ),
 			'section'  => 'blank_footer',
 			'settings' => 'blank_show_copyright',
 			'priority' => '20',
