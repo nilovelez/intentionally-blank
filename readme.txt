@@ -30,6 +30,12 @@ I probably can, but I probably won't. Blank serves a single pupose, closing the 
 
 == Changelog ==
 
+= 3.2 =
+* Tested up tp WordPress 6.9
+* Changed the logo default image size to 512x512 to make it easier to reuse the site icon
+* Upddated the code to remove unused WordPress frontend css styles
+* Removed the automatic home link from the home logo
+
 = 3.1.1 =
 * Tested up to WordPress 6.6
 
