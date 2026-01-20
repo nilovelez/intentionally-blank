@@ -44,9 +44,9 @@ body{background-color: #f5f5f5; background-size:cover}
 <?php if ( $blank_show_footer ) : ?>
 <footer id="colophon" class="site-footer">
 	<div class="site-info">
-		<?php echo wp_kses_post( get_theme_mod( 'blank_copyright', __( 'Intentionally Blank - Proudly powered by WordPress', 'intentionally-blank' ) ) ); ?>
+		<?php echo wp_kses_post( get_theme_mod( 'blank_copyright', __( 'Intentionally Blank Theme - Proudly powered by WordPress', 'intentionally-blank' ) ) ); ?>
 	</div>
 </footer>
 <?php endif; ?>
-</div><!-- #page -->
+</div>
 <?php wp_footer(); ?></body></html>
