@@ -25,15 +25,15 @@ if ( ! function_exists( 'blank_setup' ) ) :
 			)
 		);
 
-		add_theme_support( 'custom-logo' );
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 256,
-				'width'       => 256,
+				'height'      => 512,
+				'width'       => 512,
 				'flex-height' => true,
 				'flex-width'  => true,
 				'header-text' => array( 'site-title', 'site-description' ),
+				'unlink-homepage-logo' => true,
 			)
 		);
 	}
@@ -43,15 +43,27 @@ add_action( 'after_setup_theme', 'blank_setup' );
 
 remove_action( 'wp_head', '_custom_logo_header_styles' );
 
+remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
+
 if ( ! is_admin() ) {
+
+	// we have only one page, no need for speculative load rules
+	add_filter( 'wp_speculation_rules_configuration', '__return_null' );
+	
+	// removes fix for lazy loaded images
+	add_filter('wp_img_tag_add_auto_sizes', '__return_false');
+
+	// No need for global styles in a classic theme
+	remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
+	remove_action( 'wp_footer', 'wp_enqueue_global_styles', 1 );
+
 	add_action(
 		'wp_enqueue_scripts',
 		function() {
-			wp_dequeue_style( 'global-styles' );
 			wp_dequeue_style( 'classic-theme-styles' );
 			wp_dequeue_style( 'wp-block-library' );
 		}
-	);
+	, 100 );
 }
 /**
  * Sets up theme defaults and registers the various WordPress features that
