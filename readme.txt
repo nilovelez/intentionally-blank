@@ -120,3 +120,18 @@ Feature testing:
 * 16:00 PM let's make a theme!
 * 18:00 PM I've made a theme!
 * 18:05 PM Have I made a theme?
+
+== Copyright ==
+
+Intentionally Blank Theme, (C) Nilo Vélez.
+Intentionally Blank is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
