@@ -12,12 +12,6 @@ Version 4.0 is in progress on `master`. The front end stays the same blank page,
 6. GitHub repository: README, description and topics.
 7. Release 4.0.
 
-Notes for the next sessions:
-
-- The theme is live on many sites: never change behavior they rely on.
-- The theme is translated into many languages: never change an existing translatable string without Nilo's permission (see `CLAUDE.md`).
-- Playground: keep `"method": "rewrite-wp-config"` on `defineWpConfigConsts` in `blueprint.json`. With several workers, Playground CLI 3.1.64 corrupts its constants file otherwise, and the SQLite database follows.
-
 ## Log
 
 Newest entries first. One per work session, brief.
