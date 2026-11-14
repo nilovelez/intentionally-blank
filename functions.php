@@ -88,7 +88,7 @@ function blank_customize_register( $wp_customize ) {
 		'blank_copyright',
 		array(
 			'type'              => 'theme_mod',
-			'default'           => __( 'Intentionally Blank - Proudly powered by WordPress', 'intentionally-blank' ),
+			'default'           => __( 'Intentionally Blank Theme - Proudly powered by WordPress', 'intentionally-blank' ),
 			'sanitize_callback' => 'wp_kses_post',
 		)
 	);

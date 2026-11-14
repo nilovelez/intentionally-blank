@@ -31,6 +31,9 @@ I probably can, but I probably won't. Blank serves a single pupose, closing the 
 
 == Changelog ==
 
+= 4.0 =
+* The default footer text is now the same in the Customizer and on the front end
+
 = 3.3 =
 * Tested up to WordPress 7.1
 * Updated minimal PHP version to 8.2
