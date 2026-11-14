@@ -1,1 +1,11 @@
 .vscode/
+
+# Composer and npm dependencies.
+/vendor/
+node_modules/
+
+# Release zips built with `git archive`.
+/*.zip
+
+# Local Claude Code settings.
+/.claude/settings.local.json
