@@ -1,8 +1,9 @@
 === Intentionally Blank ===
 Contributors: nilovelez
 Tags: featured-images, custom-background, theme-options, translation-ready
-Requires at least: 4.6
-Tested up to: 6.9
+Requires at least: 6.1
+Tested up to: 7.1
+Requires PHP: 8.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -29,6 +30,12 @@ Blank it's actually safer than all those bloated multi-purpose themes. There isn
 I probably can, but I probably won't. Blank serves a single pupose, closing the front-end, and it does that beatifully. If there's anything more you need, fork it or install a plugin.
 
 == Changelog ==
+
+= 3.3 =
+* Tested up to WordPress 7.1
+* Updated minimal PHP version to 8.2
+* Updated minimal WordPress version to 6.1
+* Updated the code style to the WordPress Coding Standards
 
 = 3.2 =
 * Tested up tp WordPress 6.9
