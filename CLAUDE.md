@@ -1,5 +1,11 @@
 # Intentionally Blank
 
+## Translatable strings
+
+The theme is translated into many languages on translate.wordpress.org. Never change an existing translatable string without Nilo's explicit permission: not a word, a space, a line break or punctuation. Any change, even a typo fix, drops the translations of that string in every language. This includes the `style.css` headers that WordPress.org translates (Theme Name, Description, Author, Theme URI, Author URI). When a string has to change, it changes once, on purpose.
+
+Before committing a change to `style.css` or any PHP file, list the strings that are new, changed or no longer used, and show them to Nilo.
+
 ## Project status (Guppy)
 
 This project publishes its status to Guppy, Nilo's project manager (https://github.com/manuelstone/guppy). Everything Guppy-related lives in `guppy/`, written in English:
