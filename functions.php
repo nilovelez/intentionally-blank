@@ -75,6 +75,13 @@ if ( ! is_admin() ) {
 function blank_customize_register( $wp_customize ) {
 	$wp_customize->remove_section( 'static_front_page' );
 
+	// The site title and tagline are hidden unless the user chooses to show them,
+	// so the "Display Site Title and Tagline" checkbox starts unchecked.
+	$blank_header_text = $wp_customize->get_setting( 'header_text' );
+	if ( $blank_header_text ) {
+		$blank_header_text->default = 0;
+	}
+
 	$wp_customize->add_section(
 		'blank_footer',
 		array(
