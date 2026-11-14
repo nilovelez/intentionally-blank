@@ -1,19 +1,18 @@
 === Intentionally Blank ===
 Contributors: nilovelez
-Tags: featured-images, custom-background, theme-options, translation-ready
 Requires at least: 6.1
 Tested up to: 7.1
 Requires PHP: 8.2
-Stable tag: trunk
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-This theme was intentionally left blank. There are times when all you need is the WordPress dashboard and an blank frontend.
+This theme was intentionally left blank. There are times when all you need is the WordPress dashboard and a blank frontend.
 
 == Description ==
 
-You might be using the WordPress REST API as a backend for a mobile App or you might be a minimalism obsessed hipster. Blank's frontend it's a simple configurable welcome screen, while keeping the back-end fully funcional. 
+You might be using the WordPress REST API as a backend for a mobile app or you might be a minimalism obsessed hipster. Blank's frontend is a simple configurable welcome screen, while keeping the back-end fully functional.
 
+The editor is not left blank, though. Posts and pages get clean, readable editor styles with system fonts, in both the block editor and the classic editor, and you can still build pages with Elementor.
 
 == Frequently Asked Questions ==
 
@@ -23,11 +22,11 @@ Nope. It's a fully functional and tiny theme. And it's really cool.
 
 = Is it safe for production? =
 
-Blank it's actually safer than all those bloated multi-purpose themes. There isn't much to break, and code follows WordPress good practices.
+Blank is actually safer than all those bloated multi-purpose themes. There isn't much to break, and code follows WordPress good practices.
 
 = Can you add [insert functionality here]? =
 
-I probably can, but I probably won't. Blank serves a single pupose, closing the front-end, and it does that beatifully. If there's anything more you need, fork it or install a plugin.
+I probably can, but I probably won't. Blank serves a single purpose, closing the front-end, and it does that beautifully. If there's anything more you need, fork it or install a plugin.
 
 == Changelog ==
 
@@ -49,9 +48,9 @@ I probably can, but I probably won't. Blank serves a single pupose, closing the 
 * Updated the code style to the WordPress Coding Standards
 
 = 3.2 =
-* Tested up tp WordPress 6.9
+* Tested up to WordPress 6.9
 * Changed the logo default image size to 512x512 to make it easier to reuse the site icon
-* Upddated the code to remove unused WordPress frontend css styles
+* Updated the code to remove unused WordPress frontend css styles
 * Removed the automatic home link from the home logo
 
 = 3.1.1 =
@@ -104,7 +103,7 @@ I probably can, but I probably won't. Blank serves a single pupose, closing the 
 * First release available at the WordPress theme directory. Woohoo!
 
 = 1.2.2 =
-* fixes to coply with Theme review team
+* fixes to comply with Theme review team
 
 = 1.2.1 =
 * fixes to comply with Theme review team
