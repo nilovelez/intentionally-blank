@@ -1,10 +1,4 @@
 === Intentionally Blank ===
-Contributors: nilovelez
-Requires at least: 6.1
-Tested up to: 7.1
-Requires PHP: 8.2
-License: GPLv2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 This theme was intentionally left blank. There are times when all you need is the WordPress dashboard and a blank frontend.
 

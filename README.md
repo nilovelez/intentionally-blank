@@ -2,11 +2,6 @@
 
 This theme was intentionally left blank. There are times when all you need is the WordPress dashboard and a blank frontend.
 
-- Requires at least: WordPress 6.1
-- Tested up to: WordPress 7.1
-- Requires PHP: 8.2
-- License: [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-
 ## Description
 
 You might be using the WordPress REST API as a backend for a mobile app or you might be a minimalism obsessed hipster. Blank's frontend is a simple configurable welcome screen, while keeping the back-end fully functional.
