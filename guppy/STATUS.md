@@ -7,10 +7,9 @@ Version 4.0 is in progress on `master`. The front end stays the same blank page,
 1. Front end review: done (emoji, block supports and head links removed; footer text and title option fixed).
 2. Editor styles: done (`theme.json` for the block editor, `editor-style.css` for the classic editor; nothing loads on the front end).
 3. Elementor: done (`builder-preview.php`, served only to page builder previews through `template_include`; Elementor Canvas pages behave as before).
-4. AI and MCP: next. Test the MCP Adapter, the WordPress AI connectors, Studio's MCP and Novamira on the Studio site.
-5. Theme directory listing: `readme.txt`, screenshot and the `style.css` description (a translated string: change it once, on purpose).
-6. GitHub repository: README, description and topics.
-7. Release 4.0.
+4. Theme directory listing: next. `readme.txt`, screenshot and the `style.css` description (a translated string: change it once, on purpose).
+5. GitHub repository: README, description and topics.
+6. Release 4.0.
 
 ## Log
 
