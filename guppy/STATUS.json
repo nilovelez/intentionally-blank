@@ -1,0 +1,12 @@
+{
+  "id": "nilovelez-intentionally-blank",
+  "title": "Intentionally Blank",
+  "description": "This WordPress theme that does as little as possible, on purpose.",
+  "status": "inactive",
+  "status_text": "Version 3.2 is published in the WordPress.org theme directory and tested up to WordPress 6.9. No further work is planned.",
+  "last_update": "2026-11-14 09:29:42 +0100",
+  "last_update_unix": 1794644982,
+  "url": "https://github.com/nilovelez/intentionally-blank",
+  "status_url": "https://raw.githubusercontent.com/nilovelez/intentionally-blank/master/guppy/STATUS.md",
+  "icon": null
+}
