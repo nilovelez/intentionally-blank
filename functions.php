@@ -44,6 +44,46 @@ endif; // end function_exists blank_setup.
 
 add_action( 'after_setup_theme', 'blank_setup' );
 
+/**
+ * Whether the page is loaded in the preview of a page builder editor.
+ *
+ * Page builders edit the page inside a preview of the front end, and they
+ * need a template that shows the post content. Supported builders: Elementor.
+ *
+ * @return bool True in a page builder editor preview.
+ */
+function blank_is_builder_preview() {
+	// Elementor.
+	if ( did_action( 'elementor/loaded' ) && class_exists( '\Elementor\Plugin' ) ) {
+		$elementor = \Elementor\Plugin::$instance;
+		if ( isset( $elementor->preview ) && $elementor->preview->is_preview_mode() ) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
+/**
+ * Serves builder-preview.php to page builder editor previews.
+ *
+ * Visitors always get index.php. Page templates set by a builder (such as
+ * Elementor Canvas) still apply, because builders filter the template later.
+ *
+ * @param string $template Path of the template WordPress is about to load.
+ * @return string Path of the template to load.
+ */
+function blank_builder_preview_template( $template ) {
+	if ( blank_is_builder_preview() ) {
+		$preview = locate_template( 'builder-preview.php' );
+		if ( $preview ) {
+			return $preview;
+		}
+	}
+	return $template;
+}
+add_filter( 'template_include', 'blank_builder_preview_template' );
+
 remove_action( 'wp_head', '_custom_logo_header_styles' );
 
 remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
