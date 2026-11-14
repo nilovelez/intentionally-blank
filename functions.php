@@ -116,6 +116,11 @@ if ( ! is_admin() ) {
 	remove_action( 'wp_enqueue_scripts', 'wp_enqueue_stored_styles' );
 	remove_action( 'wp_footer', 'wp_enqueue_stored_styles', 1 );
 
+	// WordPress 6.1 and 6.2 only: no duotone SVG filters and no wlwmanifest link.
+	// Remove these two lines when the minimum supported version is 6.3.
+	remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
+	remove_action( 'wp_head', 'wlwmanifest_link' );
+
 	add_action(
 		'wp_enqueue_scripts',
 		function () {
