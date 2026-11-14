@@ -11,6 +11,7 @@
 * Removed the empty block supports styles from the front end
 * Removed the REST API, RSD, feed and generator links from the page head. The REST API and the feeds still work
 * Removed the obsolete -ms- and -webkit- prefixes from the logo CSS
+* Removed the duotone SVG filters and the wlwmanifest link from the front end on WordPress 6.1 and 6.2
 
 ## 3.3
 
