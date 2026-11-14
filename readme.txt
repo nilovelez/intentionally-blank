@@ -33,6 +33,7 @@ I probably can, but I probably won't. Blank serves a single pupose, closing the 
 
 = 4.0 =
 * Added a theme.json with editor styles for the block editor: system fonts, a type scale, content width and basic block styles. Nothing is loaded on the front end
+* Added a minimal editor stylesheet so the classic editor also uses system fonts
 * The default footer text is now the same in the Customizer and on the front end
 * Fixed: the "Display Site Title and Tagline" Customizer option is now unchecked by default, as it already was on the front end
 * Removed the emoji script and styles from the front end

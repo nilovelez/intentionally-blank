@@ -36,6 +36,9 @@ if ( ! function_exists( 'blank_setup' ) ) :
 				'unlink-homepage-logo' => true,
 			)
 		);
+
+		// System fonts in the classic editor (TinyMCE). The block editor uses theme.json.
+		add_editor_style( 'editor-style.css' );
 	}
 endif; // end function_exists blank_setup.
 
