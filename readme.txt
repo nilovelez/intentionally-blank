@@ -34,6 +34,9 @@ I probably can, but I probably won't. Blank serves a single pupose, closing the 
 = 4.0 =
 * The default footer text is now the same in the Customizer and on the front end
 * Fixed: the "Display Site Title and Tagline" Customizer option is now unchecked by default, as it already was on the front end
+* Removed the emoji script and styles from the front end
+* Removed the empty block supports styles from the front end
+* Removed the REST API, RSD, feed and generator links from the page head. The REST API and the feeds still work
 
 = 3.3 =
 * Tested up to WordPress 7.1
