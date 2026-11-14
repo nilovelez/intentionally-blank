@@ -12,7 +12,7 @@ This theme was intentionally left blank. There are times when all you need is th
 
 You might be using the WordPress REST API as a backend for a mobile app or you might be a minimalism obsessed hipster. Blank's frontend is a simple configurable welcome screen, while keeping the back-end fully functional.
 
-The editor is not left blank, though. Posts and pages get clean, readable editor styles with system fonts, in both the block editor and the classic editor, and you can still build pages with Elementor.
+The editor is not left blank, though. Posts and pages get clean, readable editor styles with system fonts, in both the block editor and the classic editor, and you can still build pages with Elementor and other builders.
 
 == Frequently Asked Questions ==
 
