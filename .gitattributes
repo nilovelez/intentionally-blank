@@ -14,6 +14,7 @@
 /.claude         export-ignore
 /CLAUDE.md       export-ignore
 /README.md       export-ignore
+/CHANGELOG.md    export-ignore
 /guppy           export-ignore
 /blueprint.json  export-ignore
 /composer.json   export-ignore
