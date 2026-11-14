@@ -37,6 +37,7 @@ I probably can, but I probably won't. Blank serves a single pupose, closing the 
 * Removed the emoji script and styles from the front end
 * Removed the empty block supports styles from the front end
 * Removed the REST API, RSD, feed and generator links from the page head. The REST API and the feeds still work
+* Removed the obsolete -ms- and -webkit- prefixes from the logo CSS
 
 = 3.3 =
 * Tested up to WordPress 7.1

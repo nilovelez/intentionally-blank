@@ -23,7 +23,7 @@ body{background-color: #f5f5f5; background-size:cover}
 .site-title h1 a{color:#fff;font-weight:700;text-decoration:none}
 <?php endif; ?>
 <?php if ( has_custom_logo() ) : ?>
-.custom-logo{display:block;position:absolute;left:50%;top:50%;-ms-transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);max-width:100%;height:auto}
+.custom-logo{display:block;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);max-width:100%;height:auto}
 <?php endif; ?>
 <?php if ( $blank_show_footer ) : ?>
 #colophon{position:absolute;width:100%;left:0;bottom:0;padding:10px 0;text-align:center;color:#333;background-color:rgba(241,241,241,0.4)}
