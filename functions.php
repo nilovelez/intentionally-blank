@@ -38,7 +38,7 @@ if ( ! function_exists( 'blank_setup' ) ) :
 		);
 
 		// System fonts in the classic editor (TinyMCE). The block editor uses theme.json.
-		add_editor_style( 'editor-style.css' );
+		add_editor_style( 'assets/css/editor-style.css' );
 	}
 endif; // end function_exists blank_setup.
 
@@ -49,7 +49,8 @@ add_action( 'after_setup_theme', 'blank_setup' );
  *
  * Page builders edit the page inside a preview of the front end, and they
  * need a template that shows the post content. Supported builders: Elementor,
- * Beaver Builder and SiteOrigin Page Builder.
+ * Beaver Builder, SiteOrigin Page Builder and WPBakery Page Builder (Visual
+ * Composer).
  *
  * @return bool True in a page builder editor preview.
  */
@@ -72,6 +73,11 @@ function blank_is_builder_preview() {
 		return true;
 	}
 
+	// WPBakery Page Builder (Visual Composer).
+	if ( function_exists( 'vc_is_page_editable' ) && vc_is_page_editable() ) {
+		return true;
+	}
+
 	return false;
 }
 
@@ -86,7 +92,7 @@ function blank_is_builder_preview() {
  */
 function blank_builder_preview_template( $template ) {
 	if ( blank_is_builder_preview() ) {
-		$preview = locate_template( 'builder-preview.php' );
+		$preview = locate_template( 'templates/builder-preview.php' );
 		if ( $preview ) {
 			return $preview;
 		}
@@ -105,7 +111,7 @@ function blank_builder_preview_styles() {
 	if ( blank_is_builder_preview() ) {
 		wp_enqueue_style(
 			'blank-builder-preview',
-			get_template_directory_uri() . '/builder-preview.css',
+			get_template_directory_uri() . '/assets/css/builder-preview.css',
 			array(),
 			wp_get_theme( get_template() )->get( 'Version' )
 		);
@@ -146,6 +152,14 @@ function blank_remove_builder_assets( $template ) {
 	// SiteOrigin Page Builder.
 	if ( class_exists( 'SiteOrigin_Panels' ) ) {
 		remove_action( 'wp_enqueue_scripts', array( SiteOrigin_Panels::single(), 'generate_post_css' ) );
+	}
+
+	// WPBakery Page Builder (Visual Composer).
+	if ( function_exists( 'wpbakery' ) ) {
+		$wpbakery = wpbakery();
+		remove_action( 'wp_enqueue_scripts', array( $wpbakery, 'enqueueStyle' ) );
+		remove_action( 'wp_head', array( $wpbakery, 'addShortcodesCss' ), 1000 );
+		remove_action( 'wp_head', array( $wpbakery, 'addNoScript' ), 1000 );
 	}
 
 	return $template;

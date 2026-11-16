@@ -4,7 +4,7 @@
 
 * Added a theme.json with editor styles for the block editor: system fonts, a type scale, content width and basic block styles. Nothing is loaded on the front end
 * Added a minimal editor stylesheet so the classic editor also uses system fonts
-* Added support for editing pages with Elementor, Beaver Builder, SiteOrigin and Brizy: the builder editor gets a minimal template with basic styles that shows the content, while visitors still get the theme's blank page
+* Added support for editing pages with Elementor, Beaver Builder, SiteOrigin, WPBakery (Visual Composer) and Brizy: the builder editor gets a minimal template with basic styles that shows the content, while visitors still get the theme's blank page
 * The default footer text is now the same in the Customizer and on the front end
 * Fixed: the "Display Site Title and Tagline" Customizer option is now unchecked by default, as it already was on the front end
 * Removed the emoji script and styles from the front end
@@ -12,7 +12,7 @@
 * Removed the REST API, RSD, feed and generator links from the page head. The REST API and the feeds still work
 * Removed the obsolete -ms- and -webkit- prefixes from the logo CSS
 * Removed the duotone SVG filters and the wlwmanifest link from the front end on WordPress 6.1 and 6.2
-* Removed the Elementor, Beaver Builder and SiteOrigin layout styles, scripts and fonts from the blank page. Pages with a builder template, such as Elementor Canvas, keep them
+* Removed the Elementor, Beaver Builder, SiteOrigin and WPBakery (Visual Composer) layout styles, scripts and fonts from the blank page. Pages with a builder template, such as Elementor Canvas, keep them
 
 ## 3.3
 
