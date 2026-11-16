@@ -48,8 +48,8 @@ add_action( 'after_setup_theme', 'blank_setup' );
  * Whether the page is loaded in the preview of a page builder editor.
  *
  * Page builders edit the page inside a preview of the front end, and they
- * need a template that shows the post content. Supported builders: Elementor
- * and Beaver Builder.
+ * need a template that shows the post content. Supported builders: Elementor,
+ * Beaver Builder and SiteOrigin Page Builder.
  *
  * @return bool True in a page builder editor preview.
  */
@@ -64,6 +64,11 @@ function blank_is_builder_preview() {
 
 	// Beaver Builder.
 	if ( class_exists( 'FLBuilderModel' ) && FLBuilderModel::is_builder_active() ) {
+		return true;
+	}
+
+	// SiteOrigin Page Builder (Live Editor).
+	if ( class_exists( 'SiteOrigin_Panels' ) && SiteOrigin_Panels::is_live_editor() ) {
 		return true;
 	}
 
@@ -89,6 +94,24 @@ function blank_builder_preview_template( $template ) {
 	return $template;
 }
 add_filter( 'template_include', 'blank_builder_preview_template' );
+
+/**
+ * Loads basic styles in page builder editor previews.
+ *
+ * White background, black text and the theme.json fonts and sizes, so the
+ * preview looks like the block editor. Page builder styles override them.
+ */
+function blank_builder_preview_styles() {
+	if ( blank_is_builder_preview() ) {
+		wp_enqueue_style(
+			'blank-builder-preview',
+			get_template_directory_uri() . '/builder-preview.css',
+			array(),
+			wp_get_theme( get_template() )->get( 'Version' )
+		);
+	}
+}
+add_action( 'wp_enqueue_scripts', 'blank_builder_preview_styles' );
 
 /**
  * Removes page builder layout styles and scripts from the blank page.
@@ -119,6 +142,11 @@ function blank_remove_builder_assets( $template ) {
 
 	// Beaver Builder.
 	remove_action( 'wp_enqueue_scripts', 'FLBuilder::enqueue_all_layouts_styles_scripts' );
+
+	// SiteOrigin Page Builder.
+	if ( class_exists( 'SiteOrigin_Panels' ) ) {
+		remove_action( 'wp_enqueue_scripts', array( SiteOrigin_Panels::single(), 'generate_post_css' ) );
+	}
 
 	return $template;
 }
