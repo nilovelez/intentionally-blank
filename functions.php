@@ -48,7 +48,8 @@ add_action( 'after_setup_theme', 'blank_setup' );
  * Whether the page is loaded in the preview of a page builder editor.
  *
  * Page builders edit the page inside a preview of the front end, and they
- * need a template that shows the post content. Supported builders: Elementor.
+ * need a template that shows the post content. Supported builders: Elementor
+ * and Beaver Builder.
  *
  * @return bool True in a page builder editor preview.
  */
@@ -59,6 +60,11 @@ function blank_is_builder_preview() {
 		if ( isset( $elementor->preview ) && $elementor->preview->is_preview_mode() ) {
 			return true;
 		}
+	}
+
+	// Beaver Builder.
+	if ( class_exists( 'FLBuilderModel' ) && FLBuilderModel::is_builder_active() ) {
+		return true;
 	}
 
 	return false;
@@ -83,6 +89,40 @@ function blank_builder_preview_template( $template ) {
 	return $template;
 }
 add_filter( 'template_include', 'blank_builder_preview_template' );
+
+/**
+ * Removes page builder layout styles and scripts from the blank page.
+ *
+ * Page builders load the styles, scripts and fonts of a layout on every page
+ * built with them. When the page is served with index.php, the content is
+ * never shown, so they are not needed. Templates set by a builder (such as
+ * Elementor Canvas) show the content, and keep everything.
+ *
+ * Runs last on template_include, after any plugin has chosen the template,
+ * and before wp_head prints the styles and scripts.
+ *
+ * @param string $template Path of the template WordPress is about to load.
+ * @return string The same template path, unchanged.
+ */
+function blank_remove_builder_assets( $template ) {
+	if ( locate_template( 'index.php' ) !== $template ) {
+		return $template;
+	}
+
+	// Elementor.
+	if ( did_action( 'elementor/loaded' ) && class_exists( '\Elementor\Plugin' ) ) {
+		$elementor = \Elementor\Plugin::$instance;
+		if ( isset( $elementor->frontend ) ) {
+			remove_action( 'wp_enqueue_scripts', array( $elementor->frontend, 'enqueue_styles' ), \Elementor\Frontend::ENQUEUED_STYLES_PRIORITY );
+		}
+	}
+
+	// Beaver Builder.
+	remove_action( 'wp_enqueue_scripts', 'FLBuilder::enqueue_all_layouts_styles_scripts' );
+
+	return $template;
+}
+add_filter( 'template_include', 'blank_remove_builder_assets', PHP_INT_MAX );
 
 remove_action( 'wp_head', '_custom_logo_header_styles' );
 
