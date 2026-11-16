@@ -3,9 +3,9 @@
   "title": "Intentionally Blank",
   "description": "This WordPress theme does as little as possible, on purpose.",
   "status": "active",
-  "status_text": "Version 3.3 is published in the WordPress.org theme directory. Version 4.0 is ready as a GitHub pre-release and will be published there after manual testing.",
-  "last_update": "2026-11-14 19:09:48 +0100",
-  "last_update_unix": 1794679788,
+  "status_text": "Version 3.3 is live on WordPress.org. Version 4.0 (editor and page builder support) is a GitHub pre-release in testing, then goes to the theme directory.",
+  "last_update": "2026-11-16 13:00:57 +0100",
+  "last_update_unix": 1794830457,
   "url": "https://github.com/nilovelez/intentionally-blank",
   "status_url": "https://raw.githubusercontent.com/nilovelez/intentionally-blank/master/guppy/STATUS.md",
   "icon": null
