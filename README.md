@@ -1,5 +1,7 @@
 # Intentionally Blank
 
+This is the development repository of Intentionally Blank, published at https://wordpress.org/themes/intentionally-blank/.
+
 This theme was intentionally left blank. There are times when all you need is the WordPress dashboard and a blank frontend.
 
 ## Description

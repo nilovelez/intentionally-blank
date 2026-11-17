@@ -4,13 +4,13 @@
 
 The theme is published on WordPress.org and runs on many live sites. Never change behavior those sites rely on: when there are several ways to do something, pick the one that changes the least for them, and keep new behavior limited to the admin and editor where possible. For example, pages that use Elementor Canvas show their content on the front end today, and they must keep doing so.
 
-## Test sites
-
-Keep `"method": "rewrite-wp-config"` on every `defineWpConfigConsts` step in `blueprint.json`. With several workers (the default), Playground CLI 3.1.64 corrupts its shared constants file when two blueprint steps define constants, loses `SQLITE_JOURNAL_MODE`, and the SQLite database ends up corrupted.
-
 ## Translatable strings
 
-The theme is translated into many languages on translate.wordpress.org. Never change an existing translatable string without Nilo's explicit permission: not a word, a space, a line break or punctuation. Any change, even a typo fix, drops the translations of that string in every language. This includes the `style.css` headers that WordPress.org translates (Theme Name, Description, Author, Theme URI, Author URI). When a string has to change, it changes once, on purpose.
+This theme is published on WordPress.org: https://wordpress.org/themes/intentionally-blank/. This repository is where it is developed; each release is uploaded to the WordPress.org theme directory.
+
+Its strings are translated by volunteers on translate.wordpress.org. Adding a string is fine, but changing or removing one from the last published version drops its translations in every language, so only do it when there is a good reason, with Nilo's approval.
+
+This includes the `style.css` headers that WordPress.org translates (Theme Name, Description, Author, Theme URI, Author URI).
 
 Before committing a change to `style.css` or any PHP file, list the strings that are new, changed or no longer used, and show them to Nilo.
 
